@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using MathTasks.Data.Entityes;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,5 +13,7 @@ namespace MathTasks.Data
             : base(options)
         {
         }
+
+        public DbSet <Tasks> Tasks { get; set; }
     }
 }
